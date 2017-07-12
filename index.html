@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+    </style>
+    <title>SNES classic launch date</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+
+<body>
+    
+    <center>
+        <img src="snes.jpg">
+        <h1>
+        <h1 id="days" style="display:inline;clear:none;"></h1><b> days </b>
+        <h1 id="hour" style="display:inline;clear:none;"></h1><b> hours </b>
+        <h1 id="mins" style="display:inline;clear:none;"></h1><b> minutes </b>
+        <h1 id="secs" style="display:inline;clear:none;"></h1><b> seconds </b>
+        until launch
+        </h1>
+    </center>
+    
+    <!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <div id="mc_embed_signup">
+            <form action="//appshopie.us14.list-manage.com/subscribe/post?u=8fec012d8d5f10e70fd458545&amp;id=accbe23dc7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <label for="mce-EMAIL">Enter your email to receive a reminder on launch date</label>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8fec012d8d5f10e70fd458545_accbe23dc7" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+        </div>
+        
+        <!--End mc_embed_signup-->
+    <center>
+        <br>
+        More info on <a href="http://www.nintendo.com/super-nes-classic">official site</a>
+        <br>
+    </center>
+</body>
+
+<script>
+    function go() {
+        var launch = new Date("09/29/2017");
+        var diff = launch.getTime() - Date.now();
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff = diff - days * (1000 * 60 * 60 * 24);
+        var hours = Math.floor(diff / (1000 * 60 * 60));
+        diff = diff - hours * (1000 * 60 * 60);
+        var mins = Math.floor(diff / (1000 * 60));
+        diff = diff - mins * (1000 * 60);
+        var secs = Math.floor(diff / (1000));
+        diff = diff - secs * (1000);
+        
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("mins").innerHTML = mins;
+        document.getElementById("secs").innerHTML = secs;
+        setTimeout(go, 1);
+    }
+    go();
+</script>
+
+</html>
